@@ -37,3 +37,10 @@ make clean
 make -f makefile.win
 ```
 to re-compile.
+
+Use
+```
+make -f makefile.win DEBUG=1
+```
+to build debug. If DEBUG=0 or not specified, then it is release config.
+```
