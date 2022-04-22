@@ -10,7 +10,15 @@ OBJS = 64tass.o opcodes.o str.o avl.o my_getopt.o eval.o error.o section.o \
 LDLIBS = -lm
 LANG = C
 REVISION = "2625"
-CFLAGS = -O2 -DREVISION="\"$(REVISION)\""
+
+CFLAGS = -DREVISION="\"$(REVISION)\""
+
+ifeq ($(DEBUG), 1)
+    CFLAGS +=-DDEBUG -g
+else
+    CFLAGS +=-DNDEBUG -O2
+endif
+
 LDFLAGS = -s
 TARGET = 64tass.exe
 RM ?= rm -f
