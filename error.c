@@ -1664,8 +1664,12 @@ static void error_status_val(const char *head, unsigned int val) {
 }
 
 void error_status(void) {
-    error_status_val("Error messages:    ", errors);
-    error_status_val("Warning messages:  ", warnings);
+    if (errors > 0) {
+        error_status_val("Errors:    ", errors);
+    }
+    if (warnings > 0) {
+        error_status_val("Warnings:  ", warnings);
+    }
 }
 
 linecpos_t interstring_position(linepos_t epoint, const uint8_t *data, size_t i) {
