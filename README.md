@@ -9,6 +9,7 @@ This project uses the GNU General Public License version 2.0 (GPLv2) license. Fo
 List of changes:
 * This readme file was added
 * After assembling, only print "Errors:" and "Warnings:" if nonzero errors or warnings. (Reason: otherwise Visual Studio gets confused)
+* Add a debug build config to makefile
 * Fix debug build
 
 ## Build instructions (Windows)
