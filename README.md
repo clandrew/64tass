@@ -42,4 +42,4 @@ Use
 ```
 make -f makefile.win DEBUG=1
 ```
-to build debug. If DEBUG=0 or not specified, then it is release config.
+to build debug. If DEBUG=0 or not specified, then it is release config. Since this build uses the MinGW compiler, it does not produce PDBs, so GDB may be necessary for symbolic debugging
